@@ -3,47 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>เว็บไซต์ของฉัน</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
+            background-color: #f4f4f4;
         }
-        nav {
+
+        /* เมนู */
+        .menu {
             background-color: #b7ff00f5;
-            padding: 10px;
+            padding: 15px;
+            text-align: center;
         }
-        nav a {
-            color: rgb(0, 0, 0);
+
+        .menu a {
             text-decoration: none;
-            margin-right: 15px;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
         }
-        nav a:hover {
-            color: rgb(255, 255, 0);
+
+        .menu a:hover {
+            background-color: yellow;
         }
-        section {
-            padding: 50px;
-            height: 100vh;
+
+        /* พื้นที่แสดงผล */
+        .content {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
         }
-        #home { background-color: #6aff00; }
-        #about { background-color: #8cff00; }
-        #services { background-color: #77ff00; }
-        #contact { background-color: #44ff00; }
+
+        iframe {
+            width: 900px;
+            height: 600px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+        }
     </style>
 </head>
+
 <body>
-    
-    <div>
-        <a href="งาน1.html">homework1</a>
-        <a href="งาน2.html">homework2</a>
-        <a href="งาน3.html">homework3</a>
-        <a href="Test.html">homework4</a>
-        <a href="0010.html">homework5</a>
+
+    <div class="menu">
+        <a href="งาน1.html" target="contentframe">Homework1</a>
+        <a href="งาน2.html" target="contentframe">Homework2</a>
+        <a href="งาน3.html" target="contentframe">Homework3</a>
+        <a href="Test.html" target="contentframe">Homework4</a>
+        <a href="0010.html" target="contentframe">Homework5</a>
     </div>
 
-    <section id="home">
-        <h1>หน้าแรก</h1>
-        <p>ยินดีต้อนรับสู่เว็บไซต์ของเรา</p>
-    </section>
+    <div class="content">
+        <iframe name="contentframe" src="หน้าโฮม.html"></iframe>
+    </div>
 
 </body>
 </html>
